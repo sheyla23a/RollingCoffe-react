@@ -5,10 +5,14 @@ import Menu from './components/common/Menu'
 import Error404 from './components/pages/Inicio'
 import Administrador from './components/pages/Administrador'
 import Inicio from './components/pages/Inicio'
+import { Container } from 'react-bootstrap';
 
 function App() {
   return <>
   <Menu></Menu>
+  <Container className='contenedorInicial container-fluid'>
+
+  </Container>
   {/* <Inicio></Inicio>
   <Administrador></Administrador> */}
   <Error404></Error404>
