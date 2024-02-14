@@ -14,7 +14,7 @@ function App() {
 
   </Container>
   <Inicio></Inicio>
-  {/* <Administrador></Administrador>  */}
+  {/* <Administrador></Administrador>   */}
   {/* <Error404></Error404> */}
   <Footer></Footer>
   </>;
