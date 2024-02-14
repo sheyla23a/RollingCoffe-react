@@ -1,5 +1,5 @@
 import error404 from "../../assets/error404.png";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 const Error404 = () => {
   return (
