@@ -3,9 +3,9 @@ import { Button } from "react-bootstrap";
 
 const Error404 = () => {
   return (
-    <section id="contenedprError">
+    <section id="contenedorError">
       <img src={error404} alt="error 404" className="img-fluid"></img>
-      <Button className="my-4 btnError404 fs-1">
+      <Button className="my-1 btnError404 fs-1">
         Volver <i className="bi bi-house-door-fill"></i>
       </Button>
     </section>

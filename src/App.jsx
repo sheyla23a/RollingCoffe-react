@@ -13,9 +13,9 @@ function App() {
   <Container className='contenedorInicial container-fluid'>
 
   </Container>
-  <Inicio></Inicio>
+  {/* <Inicio></Inicio> */}
   {/* <Administrador></Administrador>   */}
-  {/* <Error404></Error404> */}
+   {/* <Error404></Error404>  */}
   <Footer></Footer>
   </>;
 }
