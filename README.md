@@ -1,5 +1,7 @@
 # Rolling Coffe - React
 
+<!-- npx json-server db.json -->
+
 Proyecto CRUD cafeteria
 
 # Pasos para clonar el proyecto
