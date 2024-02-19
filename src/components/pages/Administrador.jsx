@@ -1,7 +1,16 @@
 import { Table, Button, Container } from "react-bootstrap";
+import { useEffect,useState } from "react";
+import { leerProductosAPI } from "../../helpers/queries";
 
 
 const Administrador = () => {
+  const [Productos,setProductos] = useState ([]);
+
+  useEffect(()=>{
+   leerProductosAPI()
+  }, [])
+
+
   return (
     <Container>
       <div className="d-flex justify-content-between align-items-center">
