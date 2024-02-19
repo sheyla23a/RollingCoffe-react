@@ -1,5 +1,4 @@
 import { Table, Button, Container } from "react-bootstrap";
-import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 const Administrador = () => {
@@ -8,7 +7,7 @@ const Administrador = () => {
       <div className="d-flex justify-content-between align-items-center">
         <h2 className="my-4">Productos Disponibles</h2>
         <Button>
-        <i class="bi bi-pencil-square"></i>
+        <i className="bi bi-pencil-square"></i>
         </Button>
       </div>
         <hr />
