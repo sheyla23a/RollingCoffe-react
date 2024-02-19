@@ -1,8 +1,8 @@
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 
 const FormularioProducto = () => {
   return (
-    <section>
+    <Container className="mt-4">
       <h1>Nuevo Producto</h1> <hr />
       <Form className="my-4">
         <Form.Group className="mb-3" controlId="formProdu">
@@ -42,9 +42,9 @@ const FormularioProducto = () => {
         <Form.Group className="mb-3" controlId="formCateg">
           <Form.Label>Categoria *</Form.Label>
           <Form.Select aria-label="" required>
-            <option>Seleccionar opcion</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
+            <option disabled>--Seleccionar opcion</option>
+            <option value="1">Infusion</option>
+            <option value="2">Bebida fria</option>
             <option value="3">Three</option>
           </Form.Select>
         </Form.Group>
@@ -69,7 +69,7 @@ const FormularioProducto = () => {
           Guardar
         </Button>
       </Form>
-    </section>
+    </Container>
   );
 };
 

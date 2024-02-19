@@ -6,8 +6,10 @@ import Error404 from './components/pages/Error404'
 import Administrador from './components/pages/Administrador'
 import Inicio from './components/pages/Inicio'
 import DetalleProducto from './components/pages/DetalleProducto'
+import FormProducto from './components/pages/FormularioProducto'
 import { Container } from 'react-bootstrap';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import FormularioProducto from './components/pages/FormularioProducto';
 
 function App() {
   return <>
@@ -19,6 +21,7 @@ function App() {
       <Route exact path='/administrador' element={<Administrador></Administrador>}></Route>
       <Route exact path='*' element={<Error404></Error404>}></Route>
       <Route exact path='/DetalleProducto' element={<DetalleProducto></DetalleProducto>}></Route>
+      <Route exact path='/FormularioProducto' element={<FormularioProducto></FormularioProducto>}></Route>
     </Routes>
     <Footer></Footer>
   </BrowserRouter>
