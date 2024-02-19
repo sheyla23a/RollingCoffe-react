@@ -1,21 +1,22 @@
-import batido from "../../assets/batido_oreo.jpg";
-import { Image, Row, Col } from "react-bootstrap";
+import cafe from "../../assets/cafe.jpg";
+import { Image, Row, Col, Container } from "react-bootstrap";
 
 const DetalleProducto = () => {
-  
   return (
-    
-    <Row className="fila my-5">
-      <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className="col ">
-      <Image src={batido} alt="batido" fluid id="imgDetalle" ></Image>
-      </Col>
-      <Col xs={12} sm={12} md={6} lg={6} xl={6} xxl={6} className="col "> 
+    <Container className="d-flex mt-5">
+      <section >
+        <Image src={cafe} alt="cafe" fluid id="imgDetalle"></Image>
+      </section>
+      <section className="ms-3">
         <h3 className="m-3">Batido Oreo Bliss</h3>
+        <hr />
         <p className="m-3">
-        Sumérgete en la deliciosa experiencia de nuestro Batido Oreo Bliss. Una combinación irresistiblemente suave de helado de vainilla y galletas Oreo trituradas, este batido ofrece el equilibrio perfecto entre lo cremoso y lo crujiente. Servido con un toque de crema batida y trozos adicionales de Oreo, cada sorbo es una indulgencia rápida pero inolvidable. ¿Listo para un festín de sabores? ¡El Batido Oreo Bliss te espera en nuestra cafetería!
+        "Disfruta de la perfecta armonía entre el intenso sabor del café y la suavidad de la leche en nuestra irresistible taza de café con leche. Elaborado con granos de café cuidadosamente seleccionados y una mezcla de leche cremosa, nuestro café con leche ofrece una experiencia indulgente y reconfortante. Su equilibrio único entre robustez y dulzura te envolverá en una mezcla exquisita de sabores, creando la bebida ideal para cualquier momento del día. Déjate cautivar por la calidez reconfortante de nuestro café con leche, una deliciosa pausa que eleva tus sentidos y te sumerge en la verdadera esencia de la tradición cafetera."
         </p>
-        </Col>
-      </Row>
+         <h5 className="ms-3">Categoria: Infusiones</h5>
+         <h5 className="ms-3">Precio: $1200</h5>
+      </section>
+    </Container>
   );
 };
 
