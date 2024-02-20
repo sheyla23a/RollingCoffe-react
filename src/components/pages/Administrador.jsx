@@ -1,25 +1,31 @@
 import { Table, Button, Container } from "react-bootstrap";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { leerProductosAPI } from "../../helpers/queries";
-
+import ItemProducto from "./ItemProducto";
 
 const Administrador = () => {
-  const [Productos,setProductos] = useState ([]);
+  const [Productos, setProductos] = useState([]);
 
-  useEffect(()=>{
-   leerProductosAPI()
-  }, [])
+  useEffect(() => {
+    consultarAPI();
+  }, []);
 
+  const consultarAPI = async () => {
+    try {
+      const respuesta = await leerProductosAPI();
+      setProductos(respuesta);
+    } catch (error) {}
+  };
 
   return (
     <Container>
       <div className="d-flex justify-content-between align-items-center">
         <h2 className="my-4">Productos Disponibles</h2>
         <Button>
-        <i className="bi bi-pencil-square"></i>
+          <i className="bi bi-pencil-square"></i>
         </Button>
       </div>
-        <hr />
+      <hr />
       <Table striped bordered hover>
         <thead className="text-center">
           <tr>
@@ -32,21 +38,9 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <Button className="m-1" variant="warning">
-                <i className="bi bi-pencil-square"></i>
-              </Button>
-              <Button className="m-1" variant="danger">
-                <i className="bi bi-trash3-fill"></i>
-              </Button>
-            </td>
-          </tr>
+          {Productos.map((producto) => (
+            <ItemProducto key={producto.id} producto={producto}></ItemProducto>
+            ))}
         </tbody>
       </Table>
     </Container>

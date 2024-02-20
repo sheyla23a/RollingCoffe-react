@@ -7,7 +7,7 @@
              "categoria": "Infusiones",
              "descripcionBreve": "café rico",
              "descripcionAmplia": "café rico con mas detalles",
-             "imagen": "url"
+             "imagen": "../src/assets/cafe.jpg"
         },
         {
             "id":"2",
@@ -16,7 +16,7 @@
              "categoria": "Infusiones",
              "descripcionBreve": "té rico",
              "descripcionAmplia": "té rico con mas detalles",
-             "imagen": "url"
+             "imagen": "../src/assets/te.jpg"
         }
     ]
 }
