@@ -2,6 +2,7 @@ import { Table, Button, Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { leerProductosAPI } from "../../helpers/queries";
 import ItemProducto from "./ItemProducto";
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
   const [Productos, setProductos] = useState([]);
@@ -21,9 +22,9 @@ const Administrador = () => {
     <Container>
       <div className="d-flex justify-content-between align-items-center">
         <h2 className="my-4">Productos Disponibles</h2>
-        <Button>
+        <Link className="btn btn-primary" to='/formularioProducto'>
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
       </div>
       <hr />
       <Table striped bordered hover>
