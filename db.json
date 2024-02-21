@@ -17,33 +17,6 @@
       "categoria": "Infusion",
       "descripcionBreve": "asdasdasdasdasdasdadsdasdadasdas",
       "descripcionAmplia": "asddddddddddddddddddasdddddddddddddddddddddddddddddddd"
-    },
-    {
-      "id": "1438",
-      "nombreProducto": "cafe fuerte",
-      "precio": "1300",
-      "imagen": "https://s1.elespanol.com/2017/02/13/cocinillas/cocinillas_193495389_116293001_1706x960.jpg",
-      "categoria": "Infusion",
-      "descripcionBreve": "cafe super rico para la flia",
-      "descripcionAmplia": "cafe rico puro con granos de cafe para la flia asdad"
-    },
-    {
-      "id": "c83b",
-      "nombreProducto": "cafe ",
-      "precio": "1500",
-      "imagen": "https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg?w=360&t=st=1708522227~exp=1708522827~hmac=f98cbd2ad6461934d9f3a1f6529800274bb45baa835f5a0793b310e771f4265d",
-      "categoria": "Infusion",
-      "descripcionBreve": "asddddddddddddddddddddddd",
-      "descripcionAmplia": "adsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
-    },
-    {
-      "id": "54c5",
-      "nombreProducto": "cafe",
-      "precio": "1499",
-      "imagen": "https://img.freepik.com/foto-gratis/deliciosos-granos-cafe-taza_23-2150691429.jpg?w=360&t=st=1708522227~exp=1708522827~hmac=f98cbd2ad6461934d9f3a1f6529800274bb45baa835f5a0793b310e771f4265d",
-      "categoria": "Bebida Fria",
-      "descripcionBreve": "asddddddddddddddddddddddddddddddd",
-      "descripcionAmplia": "assdddddddddddddddddddddddddddddddddddddddddddddddddddddd"
     }
   ]
 }
