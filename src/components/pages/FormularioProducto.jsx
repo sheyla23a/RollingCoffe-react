@@ -14,7 +14,7 @@ const FormularioProducto = () => {
             minLength={5}
             required
           />
-          <Form.Text className="text-muted"></Form.Text>
+          <Form.Text className="text-danger"></Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formPrecio">
@@ -23,7 +23,7 @@ const FormularioProducto = () => {
             type="number"
             placeholder="Precio"
             maxLength={4}
-            minLength={3}
+            minLength={2}
             required
           />
         </Form.Group>
@@ -32,10 +32,14 @@ const FormularioProducto = () => {
           <Form.Label>Imagen URL *</Form.Label>
           <Form.Control
             type="text"
-            placeholder="URL"
-            maxLength={50}
-            minLength={10}
-            required
+            placeholder="Ej: https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/"
+            {...register("imagen", {
+              required: "La imagen es obligatoria",
+              pattern: {
+                value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png)/,
+                message: "Debe ingresar una URL valida (jpg|jpeg|gif|png)",
+              },
+            })}
           />
         </Form.Group>
 
