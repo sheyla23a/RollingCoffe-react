@@ -1,22 +1,31 @@
 {
-    "productos" :[
-        {
-            "id":"1",
-             "nombreProducto":"café",
-             "precio": 1500,
-             "categoria": "Infusiones",
-             "descripcionBreve": "café rico",
-             "descripcionAmplia": "café rico con mas detalles",
-             "imagen": "../src/assets/cafe.jpg"
-        },
-        {
-            "id":"2",
-             "nombreProducto":"té",
-             "precio": 1000,
-             "categoria": "Infusiones",
-             "descripcionBreve": "té rico",
-             "descripcionAmplia": "té rico con mas detalles",
-             "imagen": "../src/assets/te.jpg"
-        }
-    ]
+  "productos": [
+    {
+      "id": "1",
+      "nombreProducto": "café",
+      "precio": 1500,
+      "categoria": "Infusiones",
+      "descripcionBreve": "café rico",
+      "descripcionAmplia": "café rico con mas detalles",
+      "imagen": "../src/assets/cafe.jpg"
+    },
+    {
+      "id": "2",
+      "nombreProducto": "té",
+      "precio": 1000,
+      "categoria": "Infusiones",
+      "descripcionBreve": "té rico",
+      "descripcionAmplia": "té rico con mas detalles",
+      "imagen": "../src/assets/te.jpg"
+    },
+    {
+      "id": "5d9c",
+      "nombreProducto": "te",
+      "precio": "1299",
+      "imagen": "https://rincondelte.com/wp-content/uploads/2015/01/te-rojo-propiedades.jpg",
+      "categoria": "Infusion",
+      "descripcionBreve": "cafe muy rico , con hojas puras",
+      "descripcionAmplia": "cafe muy rico , con hojas puras y cafe rico rico dasssssssssssssss"
+    }
+  ]
 }
