@@ -10,15 +10,6 @@
       "imagen": "../src/assets/cafe.jpg"
     },
     {
-      "id": "5d9c",
-      "nombreProducto": "te",
-      "precio": "1299",
-      "imagen": "https://rincondelte.com/wp-content/uploads/2015/01/te-rojo-propiedades.jpg",
-      "categoria": "Infusion",
-      "descripcionBreve": "cafe muy rico , con hojas puras",
-      "descripcionAmplia": "cafe muy rico , con hojas puras y cafe rico rico dasssssssssssssss"
-    },
-    {
       "id": "d0d9",
       "nombreProducto": "cafe",
       "precio": "1499",
