@@ -68,18 +68,12 @@ const formularioProducto = () => {
           <Form.Label>Imagen URL *</Form.Label>
           <Form.Control
             type="text"
-            placeholder="URL"
+            placeholder="Ej: https://www.pexels.com/es-es/cafe-restaurante-1230679/"
             {...register("imagen", {
-              required: "La URL del producto es obligatoria",
-              minLength: {
-                value: 15,
-                message:
-                  "La URL del producto debe tener como minimo 15 caracteres",
-              },
-              maxLength: {
-                value: 3000,
-                message:
-                  "La URL del producto debe tener como maximo 3000 caracteres",
+              required: "La imagen es obligatoria",
+              pattern: {
+                value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png)/,
+                message: "Debe ingresar una URL valida (jpg|jpeg|gif|png)",
               },
             })}
           />
@@ -91,12 +85,11 @@ const formularioProducto = () => {
         <Form.Group className="mb-3" controlId="formCateg">
           <Form.Label>Categoria *</Form.Label>
           <Form.Select
-            aria-label=""
             {...register("categoria", {
               required: "La categoria del producto es obligatoria",
             })}
           >
-            <option disabled>--Seleccionar opcion</option>
+            <option value="">--Seleccionar opcion</option>
             <option value="Infusion">Infusion</option>
             <option value="Bebida Fria">Bebida fria</option>
             <option value="Batidos">Batidos</option>
@@ -121,9 +114,9 @@ const formularioProducto = () => {
                   "La descripcion del producto debe tener como minimo 10 caracteres",
               },
               maxLength: {
-                value: 30,
+                value: 50,
                 message:
-                  "La descripcion del producto debe tener como maximo 30 caracteres",
+                  "La descripcion del producto debe tener como maximo 50 caracteres",
               },
             })}
           />
@@ -140,14 +133,14 @@ const formularioProducto = () => {
             {...register("descripcionAmplia", {
               required: "La descripcion del producto es obligatoria",
               minLength: {
-                value: 20,
-                message:
-                  "La descripcion del producto debe tener como minimo 20 caracteres",
-              },
-              maxLength: {
                 value: 50,
                 message:
-                  "La descripcion del producto debe tener como maximo 50 caracteres",
+                  "La descripcion del producto debe tener como minimo 50 caracteres",
+              },
+              maxLength: {
+                value: 300,
+                message:
+                  "La descripcion del producto debe tener como maximo 300 caracteres",
               },
             })}
           />

@@ -22,7 +22,7 @@ const Administrador = () => {
     <Container>
       <div className="d-flex justify-content-between align-items-center">
         <h2 className="my-4">Productos Disponibles</h2>
-        <Link className="btn btn-primary" to='/formularioProducto'>
+        <Link className="btn btn-primary" to="/formularioProducto">
           <i className="bi bi-pencil-square"></i>
         </Link>
       </div>
