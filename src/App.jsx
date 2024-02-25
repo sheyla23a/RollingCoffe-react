@@ -9,6 +9,8 @@ import Inicio from './components/pages/Inicio'
 import DetalleProducto from './components/pages/DetalleProducto'
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import FormularioProducto from './components/pages/FormularioProducto';
+import MaquetadoLogin from './components/pages/MaquetadoLogin';
+
 
 function App() {
   return <>
@@ -21,6 +23,7 @@ function App() {
       <Route exact path='*' element={<Error404></Error404>}></Route>
       <Route exact path='/DetalleProducto' element={<DetalleProducto></DetalleProducto>}></Route>
       <Route exact path='/FormularioProducto' element={<FormularioProducto></FormularioProducto>}></Route>
+      <Route exact path='/MaquetadoLogin' element={<MaquetadoLogin></MaquetadoLogin>}></Route>
       <Route exact path='/administrador/crear' element={<FormularioProducto editar={false}></FormularioProducto>}></Route>
       <Route exact path='/administrador/editar/:id' element={<FormularioProducto editar={true}></FormularioProducto>}></Route>
     </Routes>
