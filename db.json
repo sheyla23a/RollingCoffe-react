@@ -10,13 +10,13 @@
       "imagen": "../src/assets/cafe.jpg"
     },
     {
-      "id": "d0d9",
-      "nombreProducto": "cafe",
-      "precio": "1499",
-      "imagen": "https://s1.elespanol.com/2017/02/13/cocinillas/cocinillas_193495389_116293001_1706x960.jpg",
-      "categoria": "Infusion",
-      "descripcionBreve": "asdasdasdasdasdasdadsdasdadasdas",
-      "descripcionAmplia": "asddddddddddddddddddasdddddddddddddddddddddddddddddddd"
+      "id": "454e",
+      "nombreProducto": "Batido Oreo",
+      "precio": "2500",
+      "imagen": "https://i.pinimg.com/564x/fb/64/6f/fb646f0ff5b2eeb57c1174bb67e76fad.jpg",
+      "categoria": "Bebida Fria",
+      "descripcionBreve": " Es una deliciosa bebida ",
+      "descripcionAmplia": "Se caracteriza por su sabor dulce y cremoso, con trozos de galletas Oreo que le proporcionan un toque crujiente y un distintivo sabor a chocolate."
     }
   ]
 }
