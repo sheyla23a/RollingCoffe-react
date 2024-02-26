@@ -1,7 +1,7 @@
 import { Table, Button, Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { leerProductosAPI } from "../../helpers/queries";
-import ItemProducto from "./producto/ItemProducto";
+import ItemProducto from "../pages/producto/ItemProducto";
 import { Link } from "react-router-dom";
 
 const Administrador = () => {
