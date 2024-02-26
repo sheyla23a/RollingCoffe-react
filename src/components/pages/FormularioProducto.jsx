@@ -1,15 +1,37 @@
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearProductoAPI } from "../../helpers/queries";
+import { crearProductoAPI, obtenerProductoAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
+import { useParams } from "react-router";
+import { useEffect } from "react";
 
-const formularioProducto = ({ editar }) => {
+const formularioProducto = ({ editar, titulo }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
+
+  const { id } = useParams();
+  //  console.log(id)
+  useEffect(() => {
+    if (editar) {
+      //invocar a una funcion que devuelva un producto con el id del parametro
+      cargarDatosProducto();
+    }
+  }, []);
+
+  const cargarDatosProducto = async () => {
+    try {
+      if (respuesta.status === 200) {
+        const productoEncontrado = await respuesta.json();
+        console.log(productoEncontrado);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const productoValidado = async (producto) => {
     console.log(producto);
@@ -39,7 +61,7 @@ const formularioProducto = ({ editar }) => {
 
   return (
     <Container className="mt-4">
-      <h1>Nuevo Producto</h1> <hr />
+      <h1>{titulo}</h1> <hr />
       <Form className="my-4" onSubmit={handleSubmit(productoValidado)}>
         <Form.Group className="mb-3" controlId="formProdu">
           <Form.Label>Producto*</Form.Label>
