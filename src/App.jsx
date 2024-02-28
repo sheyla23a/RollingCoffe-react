@@ -10,16 +10,16 @@ import DetalleProducto from './components/pages/DetalleProducto'
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import FormularioProducto from './components/pages/FormularioProducto';
 import MaquetadoLogin from './components/pages/MaquetadoLogin';
-
+import { useState } from 'react';
 
 function App() {
-  const usuario = JSON.parse(sessionStorage.getItem(usuarioRollingCoffe)) || '';
+  const usuario = JSON.parse(sessionStorage.getItem('usuarioRollingCoffe')) || '';
   const[usuarioLogueado,setUsuarioLogueado]= useState(usuario);
  
   return <>
    
   <BrowserRouter>
-  <Menu></Menu>
+  <Menu usuarioLogueado={usuarioLogueado} ></Menu>
     <Routes>
       <Route exact path='/' element={<Inicio></Inicio>}></Route>
       <Route exact path='/administrador' element={<Administrador></Administrador>}></Route>

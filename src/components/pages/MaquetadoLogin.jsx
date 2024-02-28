@@ -11,7 +11,9 @@ const MaquetadoLogin = ({setUsuarioLogueado}) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const navegacion = useNavigate()
+
   const onSubmit = (usuario) => {
     if(login(usuario)){
       Swal.fire({
@@ -19,12 +21,12 @@ const MaquetadoLogin = ({setUsuarioLogueado}) => {
         text: `Bienvenido "${usuario.mail}" `,
         icon: "success",
       });
-      navegacion("/administrador")
+      navegacion("/administrador");
       setUsuarioLogueado(usuario.mail)
     }else{
       Swal.fire({
         title: "Ocurrio un error ",
-        text: `El nombre de usuario es incorrecto`,
+        text: `El nombre de usuario  o password es incorrecto`,
         icon: "error",
       });
     }
