@@ -1,5 +1,6 @@
 import { Form, Button, Container, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const MaquetadoLogin = ({setUsuarioLogueado}) => {
   const {
@@ -8,12 +9,22 @@ const MaquetadoLogin = ({setUsuarioLogueado}) => {
     formState: { errors },
   } = useForm();
 
+  const navegacion = useNavigate()
+
   const onSubmit = (usuario) => {
     if(login(usuario)){
       Swal.fire({
         title: "Usuario Logueado",
-        text: ` "${producto.nombreProducto}" `,
+        text: `Bienvenido "${usuario.mail}" `,
         icon: "success",
+      });
+      navegacion("/administrador")
+      setUsuarioLogueado(usuario.mail)
+    }else{
+      Swal.fire({
+        title: "Ocurrio un error ",
+        text: `El nombre de usuario es incorrecto`,
+        icon: "error",
       });
     }
   };
