@@ -55,8 +55,8 @@ export const borrarProductoAPI = async (id) => {
   }
 };
 
-//PUT 
-export const editarProductoAPI = async (productoModificado,id) => {
+//PUT
+export const editarProductoAPI = async (productoModificado, id) => {
   try {
     const respuesta = await fetch(`${URL_Productos}/${id}`, {
       method: "PUT",
@@ -71,3 +71,22 @@ export const editarProductoAPI = async (productoModificado,id) => {
     console.log(error);
   }
 };
+
+// modificar el login cuando tengamos backend
+
+const userAdmin = {
+  mail: "admin@rollingcoffe.com",
+  password: "123Aa$123",
+};
+
+export const login = (usuario) => {
+  if (
+    usuario.mail === userAdmin.mail &&
+    usuario.password === userAdmin.password
+  ) {
+    sessionStorage.setItem("usuarioRollingCoffe", JSON.stringify(usuario.mail));
+    return true;
+  }else{
+    return false;
+  }
+}
