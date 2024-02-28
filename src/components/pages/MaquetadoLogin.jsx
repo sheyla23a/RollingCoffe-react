@@ -1,14 +1,22 @@
 import { Form, Button, Container, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-const MaquetadoLogin = () => {
+const MaquetadoLogin = ({setUsuarioLogueado}) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (usuario) => {};
+  const onSubmit = (usuario) => {
+    if(login(usuario)){
+      Swal.fire({
+        title: "Usuario Logueado",
+        text: ` "${producto.nombreProducto}" `,
+        icon: "success",
+      });
+    }
+  };
 
   return (
     <Container className="mainSection">
