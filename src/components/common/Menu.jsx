@@ -4,15 +4,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/coffee_Logo.png'
 import { Link,NavLink, useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const Menu = ({usuarioLogueado,setUsuarioLogueado}) => {
   const navegacion = useNavigate()
-  const logout = ()=>{
-    //limpiar sessionStorage
+
+  const cerrarSesion = () => {
+    Swal.fire({
+      title: "Logout Exitoso",
+      text: `Hasta pronto!`,
+      icon: "success",
+    });
+
     sessionStorage.removeItem("usuarioRollingCoffe")
-    //actualizar State
-    setUsuarioLogueado('');
-    navegacion("/")
+    setUsuarioLogueado("")
+    navegacion('/')
   }
 
   return (
@@ -29,7 +35,7 @@ const Menu = ({usuarioLogueado,setUsuarioLogueado}) => {
               (usuarioLogueado !== '')?(
                 <>
                 <NavLink  end className="nav-link" to="/administrador">Administrador</NavLink>
-                <Button className='nav-link' variant='link' onClick={logout}>logout</Button>
+                <Button className='nav-link' variant='link' onClick={cerrarSesion}>cerrar Sesion</Button>
                 </>
               ):(
                 <>

@@ -19,7 +19,7 @@ function App() {
   return <>
    
   <BrowserRouter>
-  <Menu usuarioLogueado={usuarioLogueado} ></Menu>
+  <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
     <Routes>
       <Route exact path='/' element={<Inicio></Inicio>}></Route>
       <Route exact path='/administrador' element={<Administrador></Administrador>}></Route>
@@ -29,7 +29,7 @@ function App() {
       <Route exact path='/FormularioProducto' element={<FormularioProducto></FormularioProducto>}></Route>
       <Route exact path='/administrador/crear' element={<FormularioProducto editar={false}  titulo='nuevo Producto'></FormularioProducto>}></Route>
       <Route exact path='/administrador/editar/:id' element={<FormularioProducto editar={true} titulo='Editar Producto'></FormularioProducto>}></Route>
-      <Route exact path='/MaquetadoLogin' element={<MaquetadoLogin></MaquetadoLogin>}></Route>
+      {/* <Route exact path='/MaquetadoLogin' element={<MaquetadoLogin></MaquetadoLogin>}></Route> */}
       <Route exact path='/administrador/crear' element={<FormularioProducto editar={false} titulo='crear'></FormularioProducto>}></Route>
       <Route exact path='/administrador/editar/:id' element={<FormularioProducto editar={true} titulo= 'editar'></FormularioProducto>}></Route>
     </Routes>
