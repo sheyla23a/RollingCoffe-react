@@ -4,7 +4,7 @@
       "id": "1",
       "nombreProducto": "café",
       "precio": 1500,
-      "categoria": "Infusiones",
+      "categoria": "Infusion",
       "descripcionBreve": "café rico",
       "descripcionAmplia": "café rico con mas detalles",
       "imagen": "../src/assets/cafe.jpg"

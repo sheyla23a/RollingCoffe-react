@@ -73,12 +73,12 @@ const formularioProducto = ({ editar }) => {
             {...register("precio", {
               required: "El precio del producto es obligatorio",
               minLength: {
-                value: 2,
+                value: 50,
                 message:
                   "El precio del producto debe tener como minimo dos caracteres",
               },
               maxLength: {
-                value: 4,
+                value: 10000,
                 message:
                   "El precio del producto debe tener como maximo 4 caracteres",
               },
