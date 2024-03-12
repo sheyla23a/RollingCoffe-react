@@ -163,7 +163,7 @@ const formularioProducto = ({ editar, titulo }) => {
           >
             <option value="">--Seleccionar opcion</option>
             <option value="Infusion">Infusion</option>
-            <option value="Bebida Fria">Bebida fria</option>
+            <option value="Bebida_Fria">Bebida fria</option>
             <option value="Batidos">Batidos</option>
           </Form.Select>
           <Form.Text className="text-danger">
