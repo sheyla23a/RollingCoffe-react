@@ -1,13 +1,13 @@
 {
   "productos": [
     {
-      "nombreProducto": "Batido Oreo",
-      "precio": "1300",
-      "imagen": "https://i.pinimg.com/564x/fb/64/6f/fb646f0ff5b2eeb57c1174bb67e76fad.jpg",
-      "categoria": "Batidos",
-      "descripcionBreve": "café rico super",
-      "descripcionAmplia": "batido rico ccon facturas y pancito rico rico aaaaaas",
-      "id": "1"
+      "id": "1",
+      "nombreProducto": "café",
+      "precio": 1500,
+      "categoria": "Infusion",
+      "descripcionBreve": "café rico",
+      "descripcionAmplia": "café rico con mas detalles",
+      "imagen": "../src/assets/cafe.jpg"
     },
     {
       "id": "454e",
