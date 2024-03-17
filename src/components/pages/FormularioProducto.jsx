@@ -47,7 +47,7 @@ const formularioProducto = ({ editar, titulo }) => {
       //agregar la logica de editar
       console.log('aqui tengo que editar');
       //tomar los datos del producto validado y enviarlo a la api para actualizar
-     const respuesta = editarProductoAPI(producto,id);
+     const respuesta = editarProductoAPI(producto,_id);
      if(respuesta.status === 200){
       Swal.fire({
         title: "Producto editado!",
