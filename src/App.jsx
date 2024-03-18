@@ -31,7 +31,7 @@ function App() {
           <Route exact path="*" element={<Error404></Error404>}></Route>
           <Route
             exact
-            path="/DetalleProducto"
+            path="/DetalleProducto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
           <Route

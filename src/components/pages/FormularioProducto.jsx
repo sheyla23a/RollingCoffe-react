@@ -45,39 +45,39 @@ const formularioProducto = ({ editar, titulo }) => {
     console.log(producto);
     if (editar) {
       //agregar la logica de editar
-      console.log('aqui tengo que editar');
-      //tomar los datos del producto validado y enviarlo a la api para actualizar
-     const respuesta = editarProductoAPI(producto,_id);
-     if(respuesta.status === 200){
-      Swal.fire({
-        title: "Producto editado!",
-        text: `El producto "${producto.nombreProducto}" fue editado correctamente`,
-        icon: "success",
-      });
-      //redirecccionar a la pagina administrador 
-      navigator('/administrador')
-     }else{
-      Swal.fire({
-        title: "Ocurrio un error ",
-        text: `El producto "${producto.nombreProducto}" no pudo ser editado.Intente esta operación en unos minutos`,
-        icon: "error",
-      });
-     }
+      console.log('aqui tengo que editar')
+      // tomar los datos del producto validado y enviarlo a la api para actualizar
+      const respuesta = await editarProductoAPI(producto,id);
+      if(respuesta.status === 200){
+        Swal.fire({
+          title: "Producto modificado",
+          text: `El producto "${producto.nombreProducto}" fue modificado correctamente`,
+          icon: "success",
+        });
+        //redireccionar a la pagina del administrador
+        navegation('/administrador');
+      }else{
+        Swal.fire({
+          title: "Ocurrio un error",
+          text: `El producto "${producto.nombreProducto}" no pudo ser modificado. Intente esta operación en unos minutos`,
+          icon: "error",
+        });
+      }
     } else {
       //solicitar a la api guardar un producto nuevo
       const respuesta = await crearProductoAPI(producto);
       if (respuesta.status === 201) {
         //se creo el producto
         Swal.fire({
-          title: "Producto creado!",
+          title: "Producto creado",
           text: `El producto "${producto.nombreProducto}" fue creado correctamente`,
           icon: "success",
         });
         reset();
       } else {
         Swal.fire({
-          title: "Ocurrio un error ",
-          text: `El producto "${producto.nombreProducto}" no pudo ser creado.Intente esta operación en unos minutos`,
+          title: "Ocurrio un error",
+          text: `El producto "${producto.nombreProducto}" no pudo ser creado. Intente esta operación en unos minutos`,
           icon: "error",
         });
       }
@@ -120,12 +120,12 @@ const formularioProducto = ({ editar, titulo }) => {
             {...register("precio", {
               required: "El precio del producto es obligatorio",
               minLength: {
-                value: 50,
+                value: 2,
                 message:
-                  "El precio del producto debe tener como minimo dos caracteres",
+                  "El precio del producto debe tener como minimo  caracteres",
               },
               maxLength: {
-                value: 10000,
+                value: 4,
                 message:
                   "El precio del producto debe tener como maximo 4 caracteres",
               },
