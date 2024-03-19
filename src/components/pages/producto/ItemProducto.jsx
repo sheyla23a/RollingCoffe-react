@@ -40,7 +40,7 @@ const ItemProducto = ({producto, setProductos}) => {
   };
   return (
     <tr>
-      <td className="text-center">{producto._id}</td>
+      {/* <td className="text-center">{producto._id}</td> */}
       <td>{producto.nombreProducto}</td>
       <td className="text-end">{producto.precio}</td>
       <td className="text-center w-25 h-25">

@@ -47,7 +47,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 <NavLink end className="nav-link" to="/registro">
                   Registro
                 </NavLink>
-                <NavLink end className="nav-link" to="/login">
+                <NavLink end className="nav-link" to="/maquetadoLogin">
                   Login
                 </NavLink>
               </>

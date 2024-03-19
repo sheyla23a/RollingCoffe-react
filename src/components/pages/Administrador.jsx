@@ -30,7 +30,7 @@ const Administrador = () => {
       <Table striped bordered hover>
         <thead className="text-center">
           <tr>
-            <th>Cod</th>
+            {/* <th>Cod</th> */}
             <th>Producto</th>
             <th>Precio</th>
             <th>Url Imagen</th>
